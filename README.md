@@ -1,5 +1,6 @@
 # docs
 
+Link to report: https://docs.google.com/document/d/1lLoLMXIkacCNsWpFo2-9TAl-J2Ftjj5F2rtQht0Mvqg/edit?usp=sharing
 
 ## Front-end team:
 - Wojtysiak Kondrad
