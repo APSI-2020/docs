@@ -3,16 +3,16 @@
 every request need to have header:
 Authorization: <JWT TOKEN>
 
-GET /events?date_from=''&date_to=''&name_contains=''&tags=[]&past_events=false&price=0&place=Library
-date_from - timestamp, optional
-date_to - timestamp, optional
-name_contains - string, optional
-tags - list of tags, optional
-past_events - boolean, optional
-price - string, we return events cheaper than given price, optional
-place - string, optional
+GET /events?date_from=''&date_to=''&name_contains=''&tags=[]&past_events=false&price=0&place=Library   
+date_from - timestamp, optional   
+date_to - timestamp, optional   
+name_contains - string, optional   
+tags - list of tags, optional   
+past_events - boolean, optional   
+price - string, we return events cheaper than given price, optional   
+place - string, optional   
 
-returns filtered events available for user (that he/she can 
+returns filtered events available for user (that he/she can attend)   
 ```
 [
    {
