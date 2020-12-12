@@ -8,8 +8,8 @@ date_from - timestamp, optional
 date_to - timestamp, optional   
 name_contains - string, optional   
 tags - list of tags, optional   
-past_events - boolean, optional   
-price - string, we return events cheaper than given price, optional   
+past_events - boolean, optional - default: True
+price - string, we return events cheaper than given price, optional - when not given only events with price equal to null are returned  
 place - string, optional   
 
 returns filtered events available for user (that he/she can attend)   
