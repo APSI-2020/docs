@@ -1,0 +1,21 @@
+# 192.168.8.112 is address in my local network - localhost or 0.0.0.0 won't work unfortunately
+version: "3.9"
+services:
+  backend:
+    image: powder13/apsi-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - FRONTEND_URL=http://${IP_ADDRESS}
+      - BACKEND_URL=http://${IP_ADDRESS}:8000
+      - SSO_URL=http://${IP_ADDRESS}:8080
+  frontend:
+    image: powder13/apsi-frontend 
+    ports:
+      - "80:80"
+    environment:
+      - REACT_APP_BACKEND_BASE_URL=http://${IP_ADDRESS}:8000/api
+  sso:
+    image: powder13/apsi-mock-sso
+    ports:
+      - "8080:8080"
