@@ -1,0 +1,15 @@
+
+Tools used: Python (default version: 3.8.5) and Pycharm
+
+Open the folder in PyCharm: File -> Open,
+1. In the lower right corner there should be information about the necessity of configuration of a new interpreter. Click option Add Interpreter
+2. Select option new interpreter, after clicking apply there should be a new folder named venv 
+3. In terminal in Pycharm (terminal option on bottom bar) write:  pip install -r requirements.txt 
+4. To start a server click green triangle, if the triangle is gray click on the dropdown list and select option configure interpreter and create new Django configuration (should be done automatically)
+
+Second option to start a server is to use terminal
+1. Create new virtual environment: python -m venv venv ( if no module is found write: pip install venv )
+2. Activate virtual env by writing: venv\Scripts\activate (windows) or source venv/bin/activate (Linux)
+3. Install dependencies: pip install -r requirements.txt
+4. Start a server: python manage.py runserver (default port is 8000, to change that at the end add number of port you want to use)
+
