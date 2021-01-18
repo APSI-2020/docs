@@ -9,6 +9,12 @@ services:
       - FRONTEND_URL=http://${IP_ADDRESS}
       - BACKEND_URL=http://${IP_ADDRESS}:8000
       - SSO_URL=http://${IP_ADDRESS}:8080
+      - DB_NAME=apsi
+      - DB_USER=apsi
+      - DB_PASSWORD=apsi123
+      - DB_IP_ADDRESS=db
+      - DB_PORT=5432
+      - DB_ENGINE=postgres
   frontend:
     image: powder13/apsi-frontend 
     ports:
@@ -19,3 +25,11 @@ services:
     image: powder13/apsi-mock-sso
     ports:
       - "8080:8080"
+  db:
+    image: postgres:11
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_USER: apsi
+      POSTGRES_PASSWORD: apsi123
+      POSTGRES_DB: apsi
